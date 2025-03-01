@@ -21,16 +21,16 @@ int main() {
     printf("Carta 1\n");
 
     printf("Digite o estado:\n");
-    scanf("%3s", &Estado);
+    scanf("%s", Estado);
 
     printf("Digite a cidade:\n");
-    scanf("%s", &Cidade);
+    scanf(" %[^\n]s", Cidade);
 
     printf("Digite o codigo da carta:\n");
-    scanf("%s", &CodigoDaCarta);
+    scanf("%s", CodigoDaCarta);
     
     printf("Digite a populacao da cidade:\n");
-    scanf("%lu",  &Populacao);
+    scanf("%d",  &Populacao);
 
     printf("Digite o numero de pontos turisticos da cidade:\n");
     scanf("%d", &PontosTuristicos);
@@ -60,17 +60,17 @@ int main() {
     printf("\n");  
     printf("Carta 2\n");
 
-    printf("Digite a letra inicial do estado:\n");
-    scanf("%s", &Estado2);
+    printf("Digite o estado:\n");
+    scanf("%s", Estado2);
 
     printf("Digite a cidade:\n");
-    scanf("%s", &Cidade2);
+    scanf(" %[^\n]s", Cidade2);
 
     printf("Digite o codigo da carta:\n");
-    scanf("%s", &CodigoDaCarta2);
+    scanf("%s", CodigoDaCarta2);
 
     printf("Digite a populacao da cidade:\n");
-    scanf("%lu",  &Populacao2);
+    scanf("%d",  &Populacao2);
 
     printf("Digite a quantidade de pontos turisticos da cidade:\n");
     scanf("%d", &PontosTuristicos2);
@@ -83,20 +83,20 @@ int main() {
 
     // Cálculo de densidade populacional e PIB per capita da carta 2
 
-    float DensidadePopulacional2 = (float) Populacao2 / Area2;
-    float PIBPerCapita2 = PIB2 / (float) Populacao2;
+    float DensidadePopulacional2 =  Populacao2 / Area2;
+    float PIBPerCapita2 = PIB2 / Populacao2;
 
     // Comparação do atributo pontos turísticos para definir carta vencedora
 
-    printf("/n");
+    printf("\n");
     printf("Comparação de cartas: Atributo(Pontos turísticos).\n");
-    printf("/n");
-    printf("Carta 1 - %s: %d /n",Cidade, PontosTuristicos);
-    printf("Carta 2 - %s: %d /n",Cidade2, PontosTuristicos2);
+    printf("\n");
+    printf("Carta 1 - %s: %d \n",Cidade, PontosTuristicos);
+    printf("Carta 2 - %s: %d \n",Cidade2, PontosTuristicos2);
 
     if (PontosTuristicos > PontosTuristicos2)
     { 
-        printf("Resultado: A carta 1 (%s) venceu! \n", Cidade);
+       printf("Resultado: A carta 1 (%s) venceu! \n", Cidade);
     } else {
        printf("Resultado: A carta 2 (%s) venceu! \n", Cidade2);
     } 
@@ -104,5 +104,5 @@ int main() {
 
     
 
-
+   return 0;
 }
