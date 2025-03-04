@@ -86,23 +86,85 @@ int main() {
     float DensidadePopulacional2 =  Populacao2 / Area2;
     float PIBPerCapita2 = PIB2 / Populacao2;
 
-    // Comparação do atributo pontos turísticos para definir carta vencedora
+
+    // Escolha do atributo de comparação das cartas pelo usuário
+    int atributoescolhido;
 
     printf("\n");
-    printf("Comparação de cartas: Atributo(Pontos turísticos).\n");
+    printf("Escolha um atributo para comparação das cartas:\n");
     printf("\n");
-    printf("Carta 1 - %s: %d \n",Cidade, PontosTuristicos);
-    printf("Carta 2 - %s: %d \n",Cidade2, PontosTuristicos2);
+    printf("1. População \n");
+    printf("2. Pontos turísticos \n");
+    printf("3. Área \n");
+    printf("4. PIB \n");
+    printf("5. Densidade demográfica \n");
+    printf("5. Digite a opção: ");
+    scanf("%d", &atributoescolhido);
 
-    if (PontosTuristicos > PontosTuristicos2)
-    { 
-       printf("Resultado: A carta 1 (%s) venceu! \n", Cidade);
-    } else {
-       printf("Resultado: A carta 2 (%s) venceu! \n", Cidade2);
-    } 
-    
 
-    
+switch (atributoescolhido) 
+{
+case 1:
+   if (Populacao > Populacao2) {
+     printf("Resultado: ");
+   } else if (Populacao < Populacao2)  {
+     printf("Resultado: ");
+   } else {
+      printf("Resultado: Empate! ");
+   }
+break;
 
-   return 0;
+case 2:
+if (PontosTuristicos > PontosTuristicos2) {
+   printf("Resultado: ");
+ } else if (PontosTuristicos < PontosTuristicos2)  {
+   printf("Resultado: ");
+ } else {
+    printf("Resultado: Empate! ");
+ }
+
+break;
+case 3:
+if (Area > Area2) {
+   printf("Resultado: ");
+ } else if (Area < Area2)  {
+   printf("Resultado: ");
+ } else {
+    printf("Resultado: Empate!");
+ }
+
+break;
+case 4:
+if (PIB > PIB2) {
+   printf("Resultado: ");
+ } else if (PIB < PIB2)  {
+   printf("Resultado: ");
+ } else {
+    printf("Resultado: Empate! ");
+ }
+
+break;
+case 5:
+if (DensidadePopulacional > DensidadePopulacional2) {
+   printf("Resultado: ");
+ } else if (DensidadePopulacional < DensidadePopulacional2)  {
+   printf("Resultado: ");
+ } else {
+    printf("Resultado: Empate! ");
+ }
+
+break;
+ default: 
+   printf("Opção inválida, escolha um número de 1 a 5. \n");
+
+ }
+
+
+
+
+
+
+
+ return 0;
+
 }
