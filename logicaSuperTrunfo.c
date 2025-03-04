@@ -128,9 +128,9 @@ int main() {
     printf("3. Área \n");
     printf("4. PIB \n");
     printf("5. Densidade demográfica \n");
-    printf("5. Digite a opção: ");
+    printf("Digite a opção: ");
     scanf("%d", &atributoescolhido);
-
+    printf("\n");
 
 /* Comparação das cartas com base no atributo escolhido pelo usuário.
    Exibição do resultado da comparação, podendo vencer a carta 1, 2 ou empatar.
