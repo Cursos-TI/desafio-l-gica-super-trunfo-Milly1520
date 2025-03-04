@@ -230,10 +230,8 @@ break;
 
 default: 
    printf("Opção inválida, escolha um número de 1 a 5. \n");
-
- }
+}
 
 
  return 0;
-
 }
